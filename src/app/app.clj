@@ -13,7 +13,7 @@
         (GET "/" [:as req]
           (let [start (now)
                 body (handler req)
-                end (now)
-                response (responseHandler body)]
+                response (responseHandler body)
+                end (now)]
             (logElapsedTime start end)
             response))))
